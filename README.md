@@ -1,5 +1,8 @@
 # Codebase accompanying the paper 'Widening the Representation Bottleneck in Neural Machine Translation with Lexical Shortcuts', (Emelin, Denis, Ivan Titov, and Rico Sennrich, Third Conference on Machine Translation, Florence, 2019.)
 
+**Requirements**
+- TensorFlow 1.8
+
 Scripts used to conduct the experiments described in the submitted paper are provided in the 'scripts' directory. Their functionality is as follows:
 
 1. **preprocess.sh** is used to pre-process the training, development and test corpora used in our experiments (development and test corpora first have to be converted to plain text, e.g. by using input-from-sgm.perl, provided in the Moses toolkit). We are unable to provide the training / development / test data here due to its considerable size. However, it can be easily reproduced by running the preprocessing script on the publicly available WMT datasets. Adjust as needed for different language pairs. 
