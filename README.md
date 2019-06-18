@@ -1,4 +1,4 @@
-# Codebase accompanying the paper 'Widening the Representation Bottleneck in Neural Machine Translation with Lexical Shortcuts', (Emelin, Denis, Ivan Titov, and Rico Sennrich, Third Conference on Machine Translation, Florence, 2019.)
+# Instructions for the reproduction of the lexical shortcut studies
 
 **Requirements**
 - TensorFlow 1.8
