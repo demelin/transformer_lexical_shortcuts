@@ -750,7 +750,7 @@ def validation_bleu_loop(sess, model, config, ops, handles, target_dict, valid_s
     temp_reference_file.flush()
     process_args = \
         [config.bleu_script, temp_translation_file.name, temp_reference_file.name, config.valid_gold_reference]
-    process = subprocess.Popen(process_args, stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process = subprocess.Popen(process_args, stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     stdout, stderr = process.communicate()
     bleu_score = 0.0
     if len(stderr) > 0:

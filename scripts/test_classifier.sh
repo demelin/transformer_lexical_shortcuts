@@ -20,12 +20,12 @@ data_dir=$main_dir/data
 train_dir=$data_dir/train
 devtest_dir=$data_dir/devtest
 model_dir=$main_dir/models
-exp_dir=$main_dir/exp/directory
-nmt_dir=/path/to/trained/transformer/checkpoints
+exp_dir=$main_dir/exp_dir
+nmt_dir=/path_to_trained_transformer_checkpoints
 
-venv=$home_dir/tensorflow/environment/bin/activate
-ppath=$home_dir/tensorflow/environment/bin/python3
-transformer_home=$exp_dir/transformer/library/directory
+venv=$home_dir/tensorflow_env/bin/activate
+ppath=$home_dir/tensorflow_env/bin/python3
+transformer_home=$exp_dir/transformer_dir
 
 script_dir=`dirname $0`
 run_id=$1
@@ -71,13 +71,13 @@ python $transformer_home/codebase/lexical_probing.py \
     --token_batch_size 0 \
     --beam_size 4 \
     --length_normalization_alpha 0.6 \
-    --disp_freq 50 \
-    --valid_freq 40000 \
+    --disp_freq 100 \
+    --valid_freq 4000 \
     --greedy_freq 40000 \
     --beam_freq 40000 \
-    --save_freq 50 \
+    --save_freq 4000 \
     --max_checkpoints 1000 \
-    --summary_freq 50 \
+    --summary_freq 100 \
     --num_gpus 1 \
     --log_file $run_dir/log.txt \
     --bleu_script $transformer_home/eval/bleu_script_sacrebleu.sh \
@@ -87,11 +87,11 @@ python $transformer_home/codebase/lexical_probing.py \
     --reload $nmt_dir/transformer.npz-152000 $nmt_dir/transformer.npz-148000 $nmt_dir/transformer.npz-144000 $nmt_dir/transformer.npz-140000 $nmt_dir/transformer.npz-136000 \
     --probe_encoder \
     --probe_layer 1 \
-    --cls_pickle_dir /path/to/pickle/destination \
+    --cls_pickle_dir /path_to_pickle \
     --classifier_eval \
     --cls_reload $run_dir/transformer.npz-best_classifier_validation_accuracy \
-    --pos_reference /path/to/annotated/files/newstest2014.bpe.en.pos \
-    --freq_reference /path/to/annotated/files/newstest2014.bpe.en.freq
+    --pos_reference /path_to_pos_annotated_newstest2014 \
+    --freq_reference /path_to_freq_annotated_newstest2014
 
 
 

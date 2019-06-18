@@ -20,12 +20,12 @@ data_dir=$main_dir/data
 train_dir=$data_dir/train
 devtest_dir=$data_dir/devtest
 model_dir=$main_dir/models
-exp_dir=$main_dir/exp/directory
-nmt_dir=/path/to/trained/transformer/checkpoints
+exp_dir=$main_dir/exp_dir
+nmt_dir=/path_to_trained_transformer_checkpoints
 
-venv=$home_dir/tensorflow/environment/bin/activate
-ppath=$home_dir/tensorflow/environment/bin/python3
-transformer_home=$exp_dir/transformer/library/directory
+venv=$home_dir/tensorflow_env/bin/activate
+ppath=$home_dir/tensorflow_env/bin/python3
+transformer_home=$exp_dir/transformer_dir
 
 script_dir=`dirname $0`
 run_id=$1
@@ -68,16 +68,16 @@ python $transformer_home/codebase/lexical_probing.py \
     --translation_max_len 400 \
     --sentence_batch_size 64 \
     --maxibatch_size 40 \
-    --token_batch_size 3072 \
+    --token_batch_size 4096 \
     --beam_size 4 \
     --length_normalization_alpha 0.6 \
-    --disp_freq 50 \
-    --valid_freq 40000 \
+    --disp_freq 100 \
+    --valid_freq 4000 \
     --greedy_freq 40000 \
     --beam_freq 40000 \
-    --save_freq 50 \
+    --save_freq 4000 \
     --max_checkpoints 1000 \
-    --summary_freq 50 \
+    --summary_freq 100 \
     --num_gpus 1 \
     --log_file $run_dir/log.txt \
     --bleu_script $transformer_home/eval/bleu_script_sacrebleu.sh \
