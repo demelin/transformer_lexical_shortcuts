@@ -5,7 +5,7 @@
 - TensorFlow 1.8
 
 ## Summary
-Code for the reproduction of the lexical shortcut studies detailed in [Widening the Representation Bottleneck in Neural Machine Translation with Lexical Shortcuts](http://www.statmt.org/wmt19/pdf/WMT0120.pdf). Please refer to the paper for hyper-parameter settings, training and evaluation datasets used, and the primary findings. 
+Code for the reproduction of the lexical shortcut studies detailed in [Widening the Representation Bottleneck in Neural Machine Translation with Lexical Shortcuts](http://www.statmt.org/wmt19/pdf/52/WMT11.pdf). Please refer to the paper for hyper-parameter settings, training and evaluation datasets used, and the primary findings. 
 
 ## Usage
 Scripts used to conduct the experiments described in the paper are provided in the 'scripts' directory. Their functionality is as follows:
