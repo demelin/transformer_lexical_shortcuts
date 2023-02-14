@@ -1,7 +1,7 @@
 # Project documentation
 
 ## UPDATE -- 14.2.23
-We added a [fairseq](https://github.com/facebookresearch/fairseq) implementation of the Shortcuts Transformer (see *fairseq* directory) which can be used according to the [fairseq documentation for version 0.10.2](https://fairseq.readthedocs.io/en/v0.10.2/). To use the **Shortcut Transformer without Feature Fusion**, set the *--arch* parameter to *shortcut_transformer* argument. To use the **Shortcut Transformer with Feature Fusion**, set the *--arch* parameter to *shortcut_transformer_with_feature_fusion* argument. This reimplementation is comparable to the original one with respect to its efficacy relative to the base transformer model.
+We added a [fairseq](https://github.com/facebookresearch/fairseq) implementation of the Shortcuts Transformer (see *fairseq* directory) which can be used according to the [fairseq documentation for version 0.10.2](https://fairseq.readthedocs.io/en/v0.10.2/). To use the **Shortcut Transformer without Feature Fusion**, set the *--arch* parameter to *shortcut_transformer* argument. To use the **Shortcut Transformer with Feature Fusion**, set the *--arch* parameter to *shortcut_transformer_with_feature_fusion* argument. This reimplementation is comparable to the original one with respect to its efficacy relative to the base transformer model. To use it, merge the *fairseq/fairseq* directory in your local fairseq repository with the one provided here. 
 
 
 ## Dependencies
